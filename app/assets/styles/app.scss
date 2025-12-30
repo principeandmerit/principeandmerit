@@ -1,0 +1,22 @@
+@use "./rainbow.scss";
+@use "./normalize-additional.scss";
+@use "./font.scss";
+@use "./spacing.scss";
+@use "./colors.scss";
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  background-color: #F3F6FA;
+}
+
+.flex-center-v {
+  display: flex;
+  align-items: center;
+}
