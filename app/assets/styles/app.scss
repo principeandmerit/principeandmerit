@@ -20,3 +20,21 @@ body {
   display: flex;
   align-items: center;
 }
+
+.border {
+  border-width: 5px;
+  border-style: solid;
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.button {
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.width-full {
+  width: 100%;
+}

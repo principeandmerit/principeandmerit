@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const dialogRef = useTemplateRef<HTMLDialogElement>('dialog');
+
 const open = () => {
   dialogRef.value?.showModal();
 };
@@ -19,7 +20,9 @@ defineExpose({
     ref="dialog"
   >
     <div id="dialog-inner">
-      <div id="dialog-close-btn">
+      <div
+        id="dialog-close-btn"
+      >
         <Icon
           name="line-md:menu-to-close-alt-transition"
           size="2em"

@@ -1,88 +1,54 @@
 <template>
-  <div class="contact-section">
-    <div class="contact-info px-4 py-5">
-      <h2 class="primary mb-4">
-        Contact Us
-      </h2>
-      <p
-        style="color: white; text-align: justify; font-weight: bold; font-size: 1.1em;"
-        class="mb-2"
-      >
-        Prestige Birth and Beyond Medical Clinic and Birthing Home
-      </p>
-      <p
-        style="color: white; text-align: justify;"
-        class="font-secondary mb-2 flex-center-v"
-      >
-        <Icon
-          name="line-md:home-twotone"
-          size="1.2em"
-          class="mr-2"
+  <div class="px-4 py-5">
+    <div id="contact-section">
+      <div class="places">
+        <Place
+          place-name="Principe OB-GYN and Wellness Centre"
+          phone="+63 9 12 345 6789"
+          email="dociceprincipe@gmail.com"
+          fb-name="Principe Ob-Gyn"
+          fb-link="https://www.facebook.com/dociceprincipe"
         />
-        Dc2 Building Culiat Tandang Sora, Quezon City, Philippines
-      </p>
-      <p
-        style="color: white; text-align: justify;"
-        class="font-secondary mb-2 flex-center-v"
-      >
-        <Icon
-          name="line-md:phone-twotone"
-          size="1.2em"
-          class="mr-2"
+
+        <Place
+          place-name="MeritCare Medical . Cardio . Ob-Gyn and Diagnostic Clinic"
+          phone="0966 025 5868"
+          email="meritcare@gmail.com"
+          fb-name="MeritCare Medical"
+          fb-link="https://www.facebook.com/people/MeritCare-Medical-Cardio-Ob-Gyn-and-Diagnostic-Clinic/61581556880297/"
         />
-        Phone: 0991 790 2314
-      </p>
-      <p
-        style="color: white; text-align: justify;"
-        class="font-secondary mb-2 flex-center-v"
-      >
-        <Icon
-          name="line-md:email-alt-twotone"
-          size="1.2em"
-          class="mr-2"
-        />
-        Email: mail@mail.com
-      </p>
-    </div>
-    <div class="contact-map">
-      <ClientOnly>
-        <iframe
-          width="100%"
-          height="400"
-          style="border:0"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Prestige+Birth+and+Beyond+Medical+Clinic+and+Birthing+Home&output=embed"
-        />
-      </ClientOnly>
+      </div>
+      <div class="bg-primary px-4 py-5">
+        <h5>Visit us at:</h5>
+        <span>Room 321 Marian Medical Arts Building Dahlia St. Regalado Ave Fairview , Quezon City</span>
+      </div>
+      <GoogleMap map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2298424442074!2d121.0641006759347!3d14.699590174643745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0bd232ba4ed%3A0x314f4849c94e4f45!2sMarian%20Medical%20Arts%20Building%2C%20Dahlia%20Ave%2C%20Novaliches%2C%20Quezon%20City%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1767527425536!5m2!1sen!2sus" />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.contact-section {
+<style scoped lang="scss">
+.places {
   display: flex;
+}
 
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    background-color: black;
-  }
-
-  .contact-map {
-    width: 50%;
-  }
+#contact-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow:   0 1px 3px rgba(0, 0, 0, 0.12),
+  0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 @media screen and (max-width: 1199px) {
-  .contact-section {
+  .places {
     flex-direction: column;
 
     .contact-info,
     .contact-map {
+      width: 100%;
+    }
+
+    .place {
       width: 100%;
     }
   }

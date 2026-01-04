@@ -1,7 +1,7 @@
 <template>
   <nav class="nav px-4 py-2">
     <h3 class="primary">
-      Prestige
+      Principe & Merit
     </h3>
   </nav>
 </template>

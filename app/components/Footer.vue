@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 py-5 bg-primary text-center">
-    © 2025 Prestige Birth and Beyond Medical Clinic. All rights reserved.
+    © 2026 Principe and Merit. All rights reserved.
   </div>
 </template>
 

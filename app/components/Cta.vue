@@ -11,21 +11,27 @@ const emits = defineEmits<{
       id="cta-info"
       class="py-4 mr-5"
     >
-      <h1 class="primary mb-4">
-        Welcome to Prestige Clinic
+      <h1 class="primary">
+        Principe OB-GYN
       </h1>
-      <p>
-        <small>Your health and wellness are our top priorities. At Prestige Clinic, we offer a range of services to help you look and feel your best.</small>
+      <h3 class="primary mb-4">
+        & MeritCare Medical
+      </h3>
+      <p
+        class="font-secondary"
+        style="font-size: 1.2em; font-weight: bold;"
+      >
+        <span>Your health and wellness are our top priorities</span>
       </p>
-      <div
+      <!-- <div
         class="mt-4 mb-2 font-secondary"
         style="font-weight: bold;"
       >
         <span>Open every Monday to Friday </span> <span id="open-time">8:00 AM - 5:00 PM</span>
-      </div>
+      </div> -->
       <button
-        class="primary font-secondary px-4 py-2 mt-4"
-        style="background-color: black; border-radius: 8px"
+        class="bg-primary px-4 py-2 mt-4 button width-full"
+        style="font-size: 1.5em;"
         @click="emits('book-appointment')"
       >
         Book an Appointment
@@ -42,10 +48,10 @@ const emits = defineEmits<{
   align-items: center;
 
   #cta-image {
-    min-width: 600px;
-    flex: 1 1 600px;
+    max-width: 800px;
+    flex-grow: 1;
     height: 33rem;
-    background-image: url('../assets/images/prestige.jpg');
+    background-image: url('../assets/images/pregnant_consulting_a_doctor.jpg');
     background-size: cover;
     background-position: left top;
     border-radius: 8px;

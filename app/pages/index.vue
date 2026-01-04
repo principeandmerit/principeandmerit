@@ -9,8 +9,15 @@ const openBookingModal = () => {
 
 <template>
   <div>
-    <Cta @book-appointment="openBookingModal" />
-    <ServiceSection />
+    <Cta
+      class="mb-5"
+      @book-appointment="openBookingModal"
+    />
+    <IntegritySection class="my-5" />
+    <ServiceSection
+      class="my-5"
+      @book-appointment="openBookingModal"
+    />
     <ContactSection />
     <BookVisitModal ref="bookingModal" />
   </div>
