@@ -30,7 +30,6 @@ const getFormattedTime = (time: string) => {
 
 const open = (bookingData: { date: string, time: string }) => {
   dialogRef.value?.showModal();
-  console.log(bookingData);
   date.value = formatLocalDate(bookingData.date);
   time.value = getFormattedTime(bookingData.time);
 };

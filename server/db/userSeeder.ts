@@ -8,7 +8,7 @@ const client = postgres(connectionString, { max: 1 });
 const db = drizzle(client, { schema });
 
 async function main() {
-  console.log('Preparing to seed specific users...');
+  console.info('Preparing to seed specific users...');
 
   const usernames = [
     process.env.SEED_USER_1,
@@ -36,7 +36,7 @@ async function main() {
       .values(usersToInsert)
       .onConflictDoNothing(); // Skips if username already exists
 
-    console.log(`Successfully seeded ${usernames.length} users.`);
+    console.info(`Successfully seeded ${usernames.length} users.`);
   }
   catch (error) {
     console.error('Error during seeding:', error);

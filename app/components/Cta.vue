@@ -23,12 +23,6 @@ const emits = defineEmits<{
       >
         <span>Your health and wellness are our top priorities</span>
       </p>
-      <!-- <div
-        class="mt-4 mb-2 font-secondary"
-        style="font-weight: bold;"
-      >
-        <span>Open every Monday to Friday </span> <span id="open-time">8:00 AM - 5:00 PM</span>
-      </div> -->
       <button
         class="bg-primary px-4 py-2 mt-4 button width-full"
         style="font-size: 1.5em;"
@@ -51,10 +45,11 @@ const emits = defineEmits<{
     max-width: 800px;
     flex-grow: 1;
     height: 33rem;
-    background-image: url('../assets/images/pregnant_consulting_a_doctor.jpg');
-    background-size: cover;
-    background-position: left top;
+    background-image: url('../assets/images/principe-upscaled.png');
+    background-size: contain;
+    background-position: center;
     border-radius: 8px;
+    background-repeat: no-repeat;
   }
 }
 

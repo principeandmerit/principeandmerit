@@ -79,7 +79,6 @@ const bookingDetails = ref(null);
 
 const open = (booking) => {
   bookingDetails.value = booking;
-  console.log(bookingDetails.value)
   dialogRef.value?.showModal();
 };
 

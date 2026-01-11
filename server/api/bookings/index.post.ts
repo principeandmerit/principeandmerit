@@ -27,19 +27,25 @@ export default defineEventHandler(async (event) => {
       });
     }
 
+    const normalizedPhoneNumber = normalizePHPhone(body.phoneNumber);
+    const sanitizedInfoText = sanitizeText(normalizedPhoneNumber);
+    const normalizedNameFirst = toTitleCase(body.firstName);
+    const normalizedNameMiddle = toTitleCase(body.middleName);
+    const normalizedNameLast = toTitleCase(body.lastName);
+
     // 3. Insert into the database if slot is free
     const newBooking = await db.insert(bookings).values({
       service: body.service,
       date: body.date,
       time: body.time,
-      firstName: body.firstName,
-      middleName: body.middleName,
-      lastName: body.lastName,
-      email: body.email,
-      phoneNumber: body.phoneNumber,
+      firstName: normalizedNameFirst,
+      middleName: normalizedNameMiddle,
+      lastName: normalizedNameLast,
+      email: body.email.toLowerCase(),
+      phoneNumber: normalizedPhoneNumber,
       addressLine1: body.addressLine1,
       addressLine2: body.addressLine2,
-      info: body.info,
+      info: sanitizedInfoText,
     }).returning();
 
     return {
