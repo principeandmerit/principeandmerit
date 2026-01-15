@@ -14,35 +14,45 @@ const props = defineProps({
   label: { type: String, default: '' },
 })
 
-const emit = defineEmits(['update:modelValue', 'focus', 'blur']);
+const emit = defineEmits(['update:modelValue', 'focus', 'blur'])
 
-const inputStatus = inject(BookingDialogFormInputStatusSetter, () => {});
+const inputStatus = inject(BookingDialogFormInputStatusSetter, () => {})
 
 /* simple error handling */
-const error = ref('');
+const error = ref('')
+
+/* password toggle */
+const showPassword = ref(false)
+
+const computedType = computed(() => {
+  if (props.type === 'password') {
+    return showPassword.value ? 'text' : 'password'
+  }
+  return props.type
+})
 
 const onModelValueChange = (textValue) => {
-  emit('update:modelValue', textValue);
+  emit('update:modelValue', textValue)
 
   if (props.rule) {
     for (const rule of props.rule) {
-      const validationStatus = rule.validator(textValue);
+      const validationStatus = rule.validator(textValue)
       if (!validationStatus) {
-        error.value = rule.message;
+        error.value = rule.message
         if (rule.forField) {
-          inputStatus(rule.forField, false);
+          inputStatus(rule.forField, false)
         }
-        return;
+        return
       }
       else {
         if (rule.forField) {
-          inputStatus(rule.forField, validationStatus);
+          inputStatus(rule.forField, validationStatus)
         }
-        error.value = '';
+        error.value = ''
       }
     }
   }
-};
+}
 </script>
 
 <template>
@@ -55,17 +65,28 @@ const onModelValueChange = (textValue) => {
       {{ label }}
     </label>
 
-    <input
-      :id="id"
-      :type="type"
-      :placeholder="placeholder"
-      :value="modelValue"
-      class="base-input__field"
-      :class="{ 'has-error': error }"
-      @input="onModelValueChange($event.target.value)"
-      @focus="emit('focus', $event)"
-      @blur="emit('blur', $event)"
-    >
+    <div class="base-input__wrapper">
+      <input
+        :id="id"
+        :type="computedType"
+        :placeholder="placeholder"
+        :value="modelValue"
+        class="base-input__field"
+        :class="{ 'has-error': error }"
+        @input="onModelValueChange($event.target.value)"
+        @focus="emit('focus', $event)"
+        @blur="emit('blur', $event)"
+      >
+
+      <button
+        v-if="type === 'password'"
+        type="button"
+        class="base-input__toggle"
+        @click="showPassword = !showPassword"
+      >
+        <Icon :name="showPassword ? 'mdi:eye-off' : 'mdi:eye'" />
+      </button>
+    </div>
 
     <div style="height: 20px;">
       <p
@@ -92,8 +113,14 @@ const onModelValueChange = (textValue) => {
   color: #333;
 }
 
+.base-input__wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .base-input__field {
-  padding: 0.5rem 0.75rem;
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem; /* space for icon */
   border: 1px solid #ccc;
   border-radius: 0.375rem;
   font-size: 1rem;
@@ -109,6 +136,24 @@ const onModelValueChange = (textValue) => {
 /* error state */
 .base-input__field.has-error {
   border-color: #dc2626;
+}
+
+.base-input__toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.base-input__toggle:hover {
+  color: #000;
 }
 
 .base-input__error {

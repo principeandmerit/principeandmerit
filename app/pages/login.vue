@@ -14,14 +14,14 @@ const errorMsg = ref('');
 
 const submit = async () => {
   try {
-    const response = await $fetch('/api/auth/login', {
+    await $fetch('/api/auth/login', {
       method: 'POST',
       body: credentials.value,
     });
     router.push('/admin');
   }
-  catch (error) {
-    errorMsg.value = 'Invalid credentials.';
+  catch (e) {
+    errorMsg.value = e.response.statusText;
   }
 };
 </script>
@@ -30,29 +30,34 @@ const submit = async () => {
   <div id="login-form">
     <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
       <div class="login-card px-4 py-5">
-        <div class="mb-5">
+        <div class="mb-3">
           <h3 class="primary mb-5">
             Login
           </h3>
           <div>
             <BaseInput
               id="name"
-              v-model="credentials.name"
+              v-model.trim="credentials.name"
               label="Name"
             />
 
             <BaseInput
               id="password"
-              v-model="credentials.password"
+              v-model.trim="credentials.password"
               label="Password"
               type="password"
             />
           </div>
         </div>
         <div>
-          <span style="color: #c94471; font-size: 0.8em;">{{ errorMsg }}</span>
+          <div
+            class="p-1"
+            style="color: #c94471; font-size: 0.8em; height: 1.2em; text-align: center;"
+          >
+            {{ errorMsg }}
+          </div>
           <button
-            class="bg-primary px-4 py-1"
+            class="bg-primary px-4 py-1 mt-2"
             style="width: 100%; border-radius: 8px;"
             @click="submit"
           >

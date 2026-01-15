@@ -32,6 +32,6 @@ export default defineEventHandler(async (event) => {
     return { success: true };
   }
   else {
-    throw createError({ statusCode: 401, statusMessage: 'Invalid credentials' });
+    throw createError({ statusCode: 401, statusMessage: 'Invalid user' });
   }
 });

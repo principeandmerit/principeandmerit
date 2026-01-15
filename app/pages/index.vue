@@ -32,7 +32,6 @@ const openBookingModal = () => {
     <ContactSection />
     <BookVisitModal
       ref="bookingModal"
-      @booked="openSuccessModal"
     />
   </div>
 </template>
