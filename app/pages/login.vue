@@ -22,6 +22,7 @@ const submit = async () => {
   }
   catch (e) {
     errorMsg.value = e.response.statusText;
+    console.log(errorMsg.value);
   }
 };
 </script>
