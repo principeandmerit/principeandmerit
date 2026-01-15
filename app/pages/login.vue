@@ -23,6 +23,7 @@ const submit = async () => {
   catch (e) {
     errorMsg.value = e.response.statusText;
     console.log(123, errorMsg.value);
+    console.log(JSON.stringify(e))
   }
 };
 </script>
