@@ -45,7 +45,7 @@ const submit = async () => {
               id="password"
               v-model="credentials.password"
               label="Password"
-              type="text"
+              type="password"
             />
           </div>
         </div>
