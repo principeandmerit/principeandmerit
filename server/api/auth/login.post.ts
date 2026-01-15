@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Missing fields' });
   }
 
-  const [user] = await db.select().from(users).where(eq(users.username, username)).limit(1);
+  const [user] = await db.select().from(users).where(eq(users.username, username.toLowerCase())).limit(1);
 
   if (user) {
     const isPasswordCorrect = await bcrypt.compare(password, user.password);

@@ -26,7 +26,7 @@ async function main() {
 
   // 2. Prepare the data
   const usersToInsert = usernames.map(username => ({
-    username,
+    username: username.toLowerCase(),
     password: hashedPassword,
   }));
 
