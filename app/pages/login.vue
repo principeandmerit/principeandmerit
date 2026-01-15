@@ -21,9 +21,10 @@ const submit = async () => {
     router.push('/admin');
   }
   catch (e) {
-    errorMsg.value = e.response.statusText;
-    console.log(123, errorMsg.value);
-    console.log(JSON.stringify(e))
+    errorMsg.value
+      = e.response?._data?.statusMessage
+        || e.message
+        || 'Login failed';
   }
 };
 </script>
