@@ -44,6 +44,39 @@ const serviceList = services();
             Book an Appointment
           </button>
         </div>
+
+        <div
+          class="card-fw px-4 py-5"
+          style="text-align: center;"
+        >
+          <div>
+            <h4 class="primary mb-3">
+              OB Packages
+            </h4>
+            <div>Normal Spontaneous Delivery with local Anesthesia -35k</div>
+            <div>Normal Spontaneous Delivery with IV Sedation -40k</div>
+          </div>
+          <hr
+            class="my-5"
+            style="border: 1px solid #d1d1d1;"
+          >
+          <div>
+            <h4 class="primary">
+              CS Rate for uncomplicated delivery
+            </h4>
+            <small
+              class="font-secondary"
+              style="font-style: italic;"
+            >
+              *Depends on Hospital of choice
+            </small>
+            <div class="mt-3">
+              FEU-NRMF MEDICAL CENTER - 120-130K
+            </div>
+            <div>Commonwealth Medical Hospital - 110k-115k</div>
+            <div>North Caloocan Doctor and Hospital - 68k-75k</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -81,6 +114,14 @@ const serviceList = services();
 </template>
 
 <style lang="scss" scoped>
+.card-fw {
+  background-color: white;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow:   0 1px 3px rgba(0, 0, 0, 0.12),
+  0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -91,6 +132,8 @@ const serviceList = services();
 .services-container {
   background-image: url('../assets/images/online-services.jpg');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 8px;
   box-shadow:   0 1px 3px rgba(0, 0, 0, 0.12),
   0 8px 24px rgba(0, 0, 0, 0.18);

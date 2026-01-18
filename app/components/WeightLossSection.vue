@@ -41,6 +41,30 @@ const itemsToShow = computed(() => {
           </Slide>
         </Carousel>
       </clientOnly>
+      <div
+        class="px-4 py-5"
+        style="text-align: center;"
+      >
+        <p class="mb-4">
+          This dual-action medications which has several types according to our patients need po that acts effectively on weigltloss/ fat loss, without muscle wasting.
+          It has an Imported Formula, Dual Action for Better Results!
+          Unlike older meds that act on just one receptor, our advanced treatment works on two, giving you more effective weight-loss results. MONEY BACK GUARANTEE.
+        </p>
+        <p class="mb-4">
+          Many of our patients feel more in control of their appetite, more motivated, and encouraged as they see consistent progress under medical supervision.
+        </p>
+        <p class="mb-4">
+          Its not Like the other weight loss medication wherein most if not all patients experience insomia, palpitation, headache, severe vomiting etc.
+        </p>
+        <p class="mb-4">
+          Each injection is priced at ₱2,800. Many of our clients choose to avail the vial, as it offers a more practical and convenient option overall.
+        </p>
+        <p class="mb-4">
+          Be cautious of unverified online products—many lack proper safety certification.
+          Consult your doctor to learn if this treatment is right for you.
+          Because your health and safety come first.
+        </p>
+      </div>
     </div>
   </div>
 </template>
