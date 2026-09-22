@@ -4,8 +4,8 @@
       <div class="places">
         <Place
           place-name="Principe OB-GYN and Wellness Centre"
-          phone="0916 479 3432"
-          email="dociceprincipe@gmail.com"
+          phone="0966 025 5768"
+          email="aizzaprincipe@gmail.com"
           fb-name="Principe Ob-Gyn"
           fb-link="https://www.facebook.com/dociceprincipe"
         />
