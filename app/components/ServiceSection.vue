@@ -53,8 +53,8 @@ const serviceList = services();
             <h4 class="primary mb-3">
               OB Packages
             </h4>
-            <div>Normal Spontaneous Delivery with local Anesthesia -35k</div>
-            <div>Normal Spontaneous Delivery with IV Sedation -40k</div>
+            <div>Normal Spontaneous Delivery with Painless Anesthesia -45-55k</div>
+            <div>Normal Spontaneous Delivery with IV Sedation -40-45kk</div>
           </div>
           <hr
             class="my-5"
@@ -74,7 +74,7 @@ const serviceList = services();
               FEU-NRMF MEDICAL CENTER - 120-130K
             </div>
             <div>Commonwealth Medical Hospital - 110k-115k</div>
-            <div>North Caloocan Doctor and Hospital - 68k-75k</div>
+            <div>North Caloocan Doctor and Hospital and General Miguel Malvar Hospital - 68k-85k</div>
           </div>
         </div>
       </div>
