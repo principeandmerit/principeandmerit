@@ -9,7 +9,7 @@
         <h1 class="primary">
           Aizza Angela Principe
         </h1>
-        <h4>MD, FPOGS</h4>
+        <h4>MD, FPOGS, MHA</h4>
         <p class="mt-3">
           <small>"Delivering AFFORDABLE yet QUALITY healthcare for every man and woman—powered by trusted diagnostics in Medical, Cardio, and OB-Gyne care. Because you deserve compassionate care with accuracy you can trust.”</small>
         </p>
