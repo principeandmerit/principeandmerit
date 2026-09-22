@@ -9,13 +9,13 @@
           <h5 class="primary">
             OB
           </h5>
-          <span>Monday to Saturday 8AM - 1PM</span>
+          <span>Monday to Saturday 8AM - 1PM except Thursdays and Sundays </span>
         </li>
         <li class="mb-5">
           <h5 class="primary">
             Pedia
           </h5>
-          <span>Wednesday, Thursday, Friday 2PM - 4PM</span>
+          <span>Monday, tuesday, Friday and Saturday 1PM - 4PM</span>
         </li>
       </ul>
     </div>
